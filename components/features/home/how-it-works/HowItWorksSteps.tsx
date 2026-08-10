@@ -1,8 +1,12 @@
+"use client";
+
+import { useTranslation } from "react-i18next";
 import { howItWorksSteps } from "@/constant/how-it-works";
 
 import { HowItWorksStep } from "./HowItWorksStep";
 
 export function HowItWorksSteps() {
+  const { t } = useTranslation();
   return (
     <div className="relative mt-12">
       {/* Horizontal line - medium screens and above */}
@@ -47,8 +51,8 @@ export function HowItWorksSteps() {
           <HowItWorksStep
             key={step.number}
             number={step.number}
-            title={step.title}
-            description={step.description}
+            title={t(`howItWorks.steps.${step.key}.title`)}
+            description={t(`howItWorks.steps.${step.key}.description`)}
           />
         ))}
       </div>

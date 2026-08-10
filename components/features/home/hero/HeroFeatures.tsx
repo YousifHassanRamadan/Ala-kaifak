@@ -1,13 +1,17 @@
+"use client";
+
+import { useTranslation } from "react-i18next";
 import { heroFeatures } from "@/constant/hero-section";
 
 export function HeroFeatures() {
+  const { t } = useTranslation();
   return (
     <div className="grid grid-cols-1 gap-x-8 gap-y-5 sm:grid-cols-2">
       {heroFeatures.map((feature) => {
         const Icon = feature.icon;
 
         return (
-          <div key={feature.label} className="flex items-center gap-3">
+          <div key={feature.translationKey} className="flex items-center gap-3">
             <div
               className="
                 flex
@@ -28,7 +32,7 @@ export function HeroFeatures() {
             </div>
 
             <span className="text-sm font-medium text-brand-navy sm:text-[15px]">
-              {feature.label}
+              {t(feature.translationKey)}
             </span>
           </div>
         );

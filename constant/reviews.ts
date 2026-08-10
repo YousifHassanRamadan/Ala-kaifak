@@ -11,55 +11,49 @@ export const reviews: Review[] = [
   {
     id: 1,
     initials: "JW",
-    name: "James Whitmore",
-    location: "Dubai Marina",
+    name: "reviews.items.1.name",
+    location: "reviews.items.1.location",
     rating: 5,
-    content:
-      "Best moving experience I've had as an expat in the UAE. Clear quote, no hidden fees, and the crew arrived exactly on time.",
+    content: "reviews.items.1.content",
   },
   {
     id: 2,
     initials: "RK",
-    name: "Rana Khalil",
-    location: "Al Ain",
+    name: "reviews.items.2.name",
+    location: "reviews.items.2.location",
     rating: 5,
-    content:
-      "We relocated our office over a weekend and were fully operational by Sunday morning. Zero downtime and nothing damaged.",
+    content: "reviews.items.2.content",
   },
   {
     id: 3,
     initials: "OS",
-    name: "Omar Siddiqui",
-    location: "Abu Dhabi",
+    name: "reviews.items.3.name",
+    location: "reviews.items.3.location",
     rating: 5,
-    content:
-      "Packed our apartment in three hours with proper materials. The fragile items arrived in Dubai without a single scratch.",
+    content: "reviews.items.3.content",
   },
   {
     id: 4,
     initials: "MA",
-    name: "Maya Ahmed",
-    location: "Jumeirah",
+    name: "reviews.items.4.name",
+    location: "reviews.items.4.location",
     rating: 5,
-    content:
-      "The entire moving process was smooth and professional. The team handled everything carefully and delivered on schedule.",
+    content: "reviews.items.4.content",
   },
   {
     id: 5,
     initials: "DK",
-    name: "Daniel Khan",
-    location: "Business Bay",
+    name: "reviews.items.5.name",
+    location: "reviews.items.5.location",
     rating: 5,
-    content:
-      "Excellent service from start to finish. Communication was clear, pricing was transparent, and the movers were very professional.",
+    content: "reviews.items.5.content",
   },
   {
     id: 6,
     initials: "SA",
-    name: "Sara Ali",
-    location: "Sharjah",
+    name: "reviews.items.6.name",
+    location: "reviews.items.6.location",
     rating: 5,
-    content:
-      "Very impressed with the service. Everything was packed securely and the team made our relocation completely stress-free.",
+    content: "reviews.items.6.content",
   },
 ];

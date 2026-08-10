@@ -1,7 +1,11 @@
+"use client";
+
+import { useTranslation } from "react-i18next";
 import { CTA_CONTENT } from "@/constant/cta";
 import { ScrollToSection } from "../../scroll-to-section/scroll-to-section";
 
 export function CTAActions() {
+  const { t } = useTranslation();
   return (
     <div
       className="
@@ -45,7 +49,7 @@ export function CTAActions() {
           sm:min-w-[208px]
         "
       >
-        Get a Free Quote
+        {t("cta.getFreeQuote")}
       </ScrollToSection>
 
       <a
@@ -81,7 +85,7 @@ export function CTAActions() {
       >
         <PhoneIcon />
 
-        <span>Call Us Now</span>
+        <span>{t("cta.callUsNow")}</span>
       </a>
     </div>
   );

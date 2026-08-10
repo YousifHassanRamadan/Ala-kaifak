@@ -1,6 +1,10 @@
+"use client";
+
+import { useTranslation } from "react-i18next";
 import { CTA_CONTENT } from "@/constant/cta";
 
 export function CTAContent() {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col items-center">
       <h2
@@ -16,7 +20,7 @@ export function CTAContent() {
           xl:text-[58px]
         "
       >
-        {CTA_CONTENT.title}
+        {t(CTA_CONTENT.title)}
       </h2>
 
       <p
@@ -29,7 +33,7 @@ export function CTAContent() {
           sm:text-lg
         "
       >
-        {CTA_CONTENT.description}
+        {t(CTA_CONTENT.description)}
       </p>
     </div>
   );

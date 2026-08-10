@@ -1,3 +1,5 @@
+"use client";
+import { useTranslation } from "react-i18next";
 import Image from "next/image";
 
 import footerLogo from "@/assets/alakeifak-logo.png";
@@ -6,6 +8,7 @@ import { FOOTER_CONTENT } from "@/constant/footer";
 import { ScrollToSection } from "../../scroll-to-section/scroll-to-section";
 
 export function FooterBrand() {
+  const { t } = useTranslation();
   const { brand } = FOOTER_CONTENT;
 
   return (
@@ -24,7 +27,7 @@ export function FooterBrand() {
 
         <div>
           <h2 className="text-lg font-bold leading-none text-white flex justify-start">
-            {brand.name}
+            {t(brand.name)}
           </h2>
 
           <p
@@ -36,7 +39,7 @@ export function FooterBrand() {
               text-white/55
             "
           >
-            {brand.tagline}
+            {t(brand.tagline)}
           </p>
         </div>
       </ScrollToSection>
@@ -51,7 +54,7 @@ export function FooterBrand() {
           text-white/65
         "
       >
-        {brand.description}
+        {t(brand.description)}
       </p>
     </div>
   );

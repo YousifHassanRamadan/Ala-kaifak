@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useTranslation } from "react-i18next";
 
 import {
   Select,
@@ -23,6 +24,8 @@ import { quoteSchema, type QuoteFormData } from "@/lib/validations";
 
 import { quoteInputs, serviceTypes } from "@/constant/quote-section";
 export function QuoteForm() {
+  const { t } = useTranslation();
+
   const {
     register,
     control,
@@ -52,16 +55,16 @@ export function QuoteForm() {
         return;
       }
 
-      toast.success("Quote request sent successfully!", {
-        description: "Thank you. Our team will contact you shortly.",
+      toast.success(t("quote.toast.success"), {
+        description: t("quote.toast.successDescription"),
       });
 
       reset();
     } catch (error) {
       console.error(error);
 
-      toast.error("Something went wrong", {
-        description: "Please try again or contact us directly.",
+      toast.error(t("quote.toast.error"), {
+        description: t("quote.toast.errorDescription"),
       });
     }
   };
@@ -75,12 +78,12 @@ export function QuoteForm() {
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
         {quoteInputs.map((input) => (
           <div key={input.name} className="space-y-2">
-            <Label htmlFor={input.name}>{input.label}</Label>
+            <Label htmlFor={input.name}>{t(input.label)}</Label>
 
             <Input
               id={input.name}
               type={input.type}
-              placeholder={input.placeholder}
+              placeholder={input.placeholder ? t(input.placeholder) : undefined}
               className="h-[52px] rounded-xl bg-card"
               {...register(input.name)}
             />
@@ -95,7 +98,7 @@ export function QuoteForm() {
 
         {/* Service */}
         <div className="space-y-2 md:col-span-2 lg:col-span-3">
-          <Label htmlFor="service">Service Type</Label>
+          <Label htmlFor="service">{t("quote.form.service.label")}</Label>
 
           <Controller
             name="service"
@@ -106,13 +109,15 @@ export function QuoteForm() {
                   id="service"
                   className="h-[52px] w-full rounded-xl bg-card"
                 >
-                  <SelectValue placeholder="Select a service" />
+                  <SelectValue
+                    placeholder={t("quote.form.service.placeholder")}
+                  />
                 </SelectTrigger>
 
                 <SelectContent>
                   {serviceTypes.map((service) => (
                     <SelectItem key={service.value} value={service.value}>
-                      {service.label}
+                      {t(service.label)}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -144,13 +149,15 @@ export function QuoteForm() {
             hover:bg-brand-orange-dark
           "
         >
-          {isSubmitting ? "Sending..." : "Get My Free Quote"}
+          {isSubmitting
+            ? t("quote.form.submit.loading")
+            : t("quote.form.submit.default")}
         </Button>
 
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <ShieldCheck className="h-[18px] w-[18px] shrink-0 text-brand-blue" />
 
-          <span>Your details stay private. No spam, ever.</span>
+          <span>{t("quote.form.privacy")}</span>
         </div>
       </div>
     </form>

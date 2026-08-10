@@ -1,28 +1,28 @@
 export const quoteBenefits = [
-  "No obligation, fully transparent pricing",
-  "Response within 30 minutes",
-  "Available 24/7 across the UAE",
+  "quote.benefits.transparentPricing",
+  "quote.benefits.responseTime",
+  "quote.benefits.availability",
 ];
 
 export const serviceTypes = [
   {
     value: "home-moving",
-    label: "Home Moving",
+    label: "quote.services.homeMoving",
   },
   {
     value: "office-moving",
-    label: "Office Moving",
+    label: "quote.services.officeMoving",
   },
   {
     value: "packing",
-    label: "Packing Services",
+    label: "quote.services.packing",
   },
   {
     value: "storage",
-    label: "Storage",
+    label: "quote.services.storage",
   },
   {
     value: "international-moving",
-    label: "International Moving",
+    label: "quote.services.internationalMoving",
   },
 ];

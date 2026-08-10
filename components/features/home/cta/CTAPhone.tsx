@@ -1,6 +1,10 @@
+"use client";
+
+import { useTranslation } from "react-i18next";
 import { CTA_CONTENT } from "@/constant/cta";
 
 export function CTAPhone() {
+  const { t } = useTranslation();
   return (
     <div className="mt-10 flex flex-col items-center">
       <a
@@ -34,12 +38,12 @@ export function CTAPhone() {
           sm:text-[11px]
         "
       >
-        <span>{CTA_CONTENT.availability}</span>
+        <span>{t(CTA_CONTENT.availability)}</span>
 
         {CTA_CONTENT.locations.map((location) => (
           <span key={location} className="flex items-center gap-2">
             <span aria-hidden="true">•</span>
-            {location}
+            {t(location)}
           </span>
         ))}
       </div>

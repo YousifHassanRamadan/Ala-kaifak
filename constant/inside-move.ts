@@ -6,23 +6,23 @@ import assemblyImage from "@/assets/step-assembly.jpg";
 
 export const insideMoveItems = [
   {
-    title: "Packing",
+    title: "insideMove.items.packing",
     image: packingImage,
   },
   {
-    title: "Loading",
+    title: "insideMove.items.loading",
     image: loadingImage,
   },
   {
-    title: "Transportation",
+    title: "insideMove.items.transportation",
     image: transportationImage,
   },
   {
-    title: "Unloading",
+    title: "insideMove.items.unloading",
     image: unloadingImage,
   },
   {
-    title: "Assembly",
+    title: "insideMove.items.assembly",
     image: assemblyImage,
   },
 ];

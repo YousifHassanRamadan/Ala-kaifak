@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import { ReviewCard } from "./ReviewCard";
 import { ReviewControls } from "./ReviewControls";
@@ -11,6 +12,7 @@ const MOBILE_ITEMS_PER_PAGE = 1;
 
 export function ReviewsSection() {
   const [page, setPage] = useState(0);
+  const { t } = useTranslation();
 
   const totalPages = Math.ceil(reviews.length / DESKTOP_ITEMS_PER_PAGE);
 
@@ -68,7 +70,7 @@ export function ReviewsSection() {
                 text-brand-orange
               "
             >
-              Reviews
+              {t("reviews.eyebrow")}
             </p>
 
             <h2
@@ -81,7 +83,7 @@ export function ReviewsSection() {
                 lg:text-[34px]
               "
             >
-              What Our Customers Say
+              {t("reviews.title")}
             </h2>
 
             <p
@@ -93,8 +95,7 @@ export function ReviewsSection() {
                 sm:text-[15px]
               "
             >
-              Families, expats and businesses across the UAE trust us with their
-              move.
+              {t("reviews.description")}
             </p>
           </div>
 
@@ -150,7 +151,9 @@ export function ReviewsSection() {
               key={index}
               type="button"
               onClick={() => goToPage(index)}
-              aria-label={`Go to review page ${index + 1}`}
+              aria-label={t("reviews.pagination.goToPage", {
+                page: index + 1,
+              })}
               aria-current={page === index ? "page" : undefined}
               className={`
                 h-1.5 rounded-full

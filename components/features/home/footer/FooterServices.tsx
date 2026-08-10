@@ -1,7 +1,10 @@
+"use client";
+import { useTranslation } from "react-i18next";
 import { FOOTER_CONTENT } from "@/constant/footer";
 import { ScrollToSection } from "../../scroll-to-section/scroll-to-section";
 
 export function FooterServices() {
+  const { t } = useTranslation();
   return (
     <div>
       <h3
@@ -12,7 +15,7 @@ export function FooterServices() {
           text-white
         "
       >
-        SERVICES
+        {t("footer.services.title")}
       </h3>
 
       <nav className="mt-7 flex flex-col items-start gap-4">
@@ -31,7 +34,7 @@ export function FooterServices() {
               focus-visible:text-primary
             "
           >
-            {service.label}
+            {t(service.label)}
           </ScrollToSection>
         ))}
       </nav>

@@ -1,8 +1,11 @@
+"use client";
 import { HeroActions } from "./HeroActions";
 import { HeroBadge } from "./HeroBadge";
 import { HeroFeatures } from "./HeroFeatures";
+import { useTranslation } from "react-i18next";
 
 export function HeroContent() {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col">
       <HeroBadge />
@@ -21,11 +24,11 @@ export function HeroContent() {
           lg:tracking-[-2.5px]
         "
       >
-        Moving Made
+        {t("hero.titleLine1")}
         <br />
-        Simple.
+        {t("hero.titleLine2")}
         <br />
-        <span className="text-blue-800/90">We Move. You Relax.</span>
+        <span className="text-blue-800/90">{t("hero.titleHighlight")}</span>
       </h1>
 
       <p
@@ -39,8 +42,7 @@ export function HeroContent() {
           sm:leading-8
         "
       >
-        Professional home and office relocation services across Abu Dhabi, Dubai
-        and the UAE.
+        {t("hero.description")}
       </p>
 
       <div className="mt-8">

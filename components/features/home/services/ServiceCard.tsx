@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslation } from "react-i18next";
 import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -16,6 +19,7 @@ export function ServiceCard({
   icon: Icon,
   featured = false,
 }: ServiceCardProps) {
+  const { t } = useTranslation();
   return (
     <article
       className={`
@@ -87,7 +91,7 @@ export function ServiceCard({
         "
       >
         <ScrollToSection targetId="quote">
-          <span>Learn More</span>
+          <span>{t("services.learnMore")}</span>
 
           <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
         </ScrollToSection>

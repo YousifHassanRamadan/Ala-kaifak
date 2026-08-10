@@ -1,3 +1,8 @@
+"use client";
+
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
+
 interface ReviewControlsProps {
   currentPage: number;
   totalPages: number;
@@ -13,6 +18,9 @@ export function ReviewControls({
   onNext,
   onPageChange,
 }: ReviewControlsProps) {
+  const { t, i18n } = useTranslation();
+
+  const isRTL = i18n.dir() === "rtl";
   return (
     <div className="flex items-center gap-2">
       {/* Previous */}
@@ -20,7 +28,7 @@ export function ReviewControls({
         type="button"
         onClick={onPrevious}
         disabled={currentPage === 0}
-        aria-label="Previous reviews"
+        aria-label={t("reviews.controls.previous")}
         className="
           flex size-8 items-center justify-center
           rounded-lg
@@ -36,16 +44,11 @@ export function ReviewControls({
           sm:size-9
         "
       >
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          className="size-4"
-          aria-hidden="true"
-        >
-          <path d="m15 18-6-6 6-6" />
-        </svg>
+        {isRTL ? (
+          <ChevronRight className="size-4" />
+        ) : (
+          <ChevronLeft className="size-4" />
+        )}
       </button>
 
       {/* Next */}
@@ -53,7 +56,7 @@ export function ReviewControls({
         type="button"
         onClick={onNext}
         disabled={currentPage === totalPages - 1}
-        aria-label="Next reviews"
+        aria-label={t("reviews.controls.next")}
         className="
           flex size-8 items-center justify-center
           rounded-lg
@@ -67,16 +70,11 @@ export function ReviewControls({
           sm:size-9
         "
       >
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          className="size-4"
-          aria-hidden="true"
-        >
-          <path d="m9 18 6-6-6-6" />
-        </svg>
+        {isRTL ? (
+          <ChevronLeft className="size-4" />
+        ) : (
+          <ChevronRight className="size-4" />
+        )}
       </button>
 
       {/* Mobile page indicator */}

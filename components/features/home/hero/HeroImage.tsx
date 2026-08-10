@@ -1,7 +1,10 @@
+"use client";
+import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import heroImage from "@/assets/hero-movers.png";
 
 export function HeroImage() {
+  const { t } = useTranslation();
   return (
     <div className="relative">
       {/* Main Image */}
@@ -47,20 +50,26 @@ export function HeroImage() {
           lg:bottom-[-35px]
         "
       >
-        <h3 className="text-base font-bold text-brand-navy">Need to move?</h3>
+        <h3 className="text-base font-bold text-brand-navy">
+          {t("hero.imageCard.title")}
+        </h3>
 
         <p className="mt-1 text-sm text-muted-foreground">
-          Get your free quote today
+          {t("hero.imageCard.description")}
         </p>
 
         <div className="my-3 h-px bg-border" />
 
         <p className="text-xs font-medium">
-          <span className="text-brand-blue">Fast response</span>
+          <span className="text-brand-blue">
+            {t("hero.imageCard.fastResponse")}
+          </span>
 
           <span className="text-muted-foreground"> • </span>
 
-          <span className="text-brand-navy">Professional service</span>
+          <span className="text-brand-navy">
+            {t("hero.imageCard.professionalService")}
+          </span>
         </p>
       </div>
     </div>

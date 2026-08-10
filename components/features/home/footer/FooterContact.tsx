@@ -1,7 +1,10 @@
+"use client";
+import { useTranslation } from "react-i18next";
 import { FOOTER_CONTENT } from "@/constant/footer";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 export function FooterContact() {
+  const { t } = useTranslation();
   const { contact } = FOOTER_CONTENT;
 
   return (
@@ -14,7 +17,7 @@ export function FooterContact() {
           text-white
         "
       >
-        CONTACT
+        {t("footer.contact.title")}
       </h3>
 
       <div className="mt-7 flex flex-col gap-5">
@@ -85,7 +88,7 @@ export function FooterContact() {
           <div>
             <p>{contact.locations.join(" • ")}</p>
 
-            <p>{contact.country}</p>
+            <p>{t(contact.country)}</p>
           </div>
         </div>
       </div>

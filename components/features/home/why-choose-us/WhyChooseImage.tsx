@@ -1,8 +1,12 @@
+"use client";
+
+import { useTranslation } from "react-i18next";
 import Image from "next/image";
 
 import whyChooseUsImage from "@/assets/why-choose-us.png";
 
 export function WhyChooseImage() {
+  const { t } = useTranslation();
   return (
     <div className="w-full">
       {/* Image + Desktop Floating Cards */}
@@ -56,7 +60,7 @@ export function WhyChooseImage() {
           >
             <p className="text-2xl font-bold text-brand-navy">5000+</p>
 
-            <p className="text-sm text-muted-foreground">Successful moves</p>
+            {t("whyChooseUs.successfulMoves")}
           </div>
 
           {/* 10+ */}
@@ -73,7 +77,7 @@ export function WhyChooseImage() {
             <p className="text-2xl font-bold text-primary-foreground">10+</p>
 
             <p className="text-sm font-medium text-primary-foreground/90">
-              Years in the UAE
+              {t("whyChooseUs.yearsInUae")}
             </p>
           </div>
         </div>

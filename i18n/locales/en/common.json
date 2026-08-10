@@ -1,0 +1,411 @@
+{
+  "header": {
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "whyChooseUs": "Why Choose Us",
+      "howItWorks": "How It Works",
+      "reviews": "Reviews",
+      "contact": "Contact"
+    },
+    "actions": {
+      "getFreeQuote": "Get a Free Quote",
+      "callUs": "Call Us",
+      "openMenu": "Open menu",
+      "callUsSr": "Call us",
+      "whatsappSr": "WhatsApp"
+    },
+    "brand": {
+      "name": "Ala Kaifak",
+      "alt": "Ala Kaifak Furniture Movers"
+    }
+  },
+  "hero": {
+    "titleLine1": "Moving Made",
+    "titleLine2": "Simple.",
+    "titleHighlight": "We Move. You Relax.",
+    "description": "Professional home and office relocation services across Abu Dhabi, Dubai and the UAE.",
+    "features": {
+      "service24": "24/7 Service",
+      "professionalTeam": "Professional Team",
+      "safeSecure": "Safe & Secure Moving",
+      "uaeCoverage": "UAE-Wide Coverage",
+      "imageCard": {
+        "title": "Need to move?",
+        "description": "Get your free quote today",
+        "fastResponse": "Fast response",
+        "professionalService": "Professional service"
+      }
+    },
+    "actions": { "quote": "Get a Free Quote", "call": "Call Us Now" },
+    "badge": "Trusted Moving Company in UAE"
+  },
+  "quote": {
+    "info": {
+      "title": "Get Your Free Moving Quote",
+      "description": "Tell us a few details and our team will get back to you shortly."
+    },
+    "benefits": {
+      "transparentPricing": "No obligation, fully transparent pricing",
+      "responseTime": "Response within 30 minutes",
+      "availability": "Available 24/7 across the UAE"
+    },
+    "services": {
+      "homeMoving": "Home Moving",
+      "officeMoving": "Office Moving",
+      "packing": "Packing Services",
+      "storage": "Storage",
+      "internationalMoving": "International Moving"
+    },
+    "form": {
+      "firstName": {
+        "label": "First Name",
+        "placeholder": "Ahmed"
+      },
+      "lastName": {
+        "label": "Last Name",
+        "placeholder": "Al Mansoori"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "+971 50 000 0000"
+      },
+      "moveFrom": {
+        "label": "Move From",
+        "placeholder": "Abu Dhabi, Al Reem"
+      },
+      "moveTo": {
+        "label": "Move To",
+        "placeholder": "Dubai, Marina"
+      },
+      "movingDate": {
+        "label": "Moving Date"
+      },
+      "service": {
+        "label": "Service Type",
+        "placeholder": "Select a service"
+      },
+      "services": {
+        "homeMoving": "Home Moving",
+        "officeMoving": "Office Moving",
+        "villaMoving": "Villa Moving",
+        "packing": "Packing Services",
+        "storage": "Storage"
+      },
+      "submit": {
+        "default": "Get My Free Quote",
+        "loading": "Sending..."
+      },
+      "privacy": "Your details stay private. No spam, ever."
+    },
+    "toast": {
+      "success": "Quote request sent successfully!",
+      "successDescription": "Thank you. Our team will contact you shortly.",
+      "error": "Something went wrong",
+      "errorDescription": "Please try again or contact us directly."
+    }
+  },
+  "services": {
+    "badge": "Our Services",
+    "title": "Complete Moving Services",
+    "description": "Everything you need for a smooth, stress-free move.",
+    "label": "Our Services",
+
+    "items": {
+      "homeMoving": {
+        "title": "Home Moving",
+        "description": "Professional apartment, villa and residential moving services."
+      },
+      "officeRelocation": {
+        "title": "Office Relocation",
+        "description": "Efficient office moving designed to minimize business downtime."
+      },
+      "packing": {
+        "title": "Packing & Unpacking",
+        "description": "Careful packing and unpacking using professional materials."
+      },
+      "furnitureMoving": {
+        "title": "Furniture Moving",
+        "description": "Safe transportation of furniture and valuable belongings."
+      },
+      "assembly": {
+        "title": "Assembly & Disassembly",
+        "description": "Professional furniture disassembly and reassembly."
+      },
+      "transportation": {
+        "title": "Loading & Transportation",
+        "description": "Secure loading, transportation and unloading across the UAE."
+      }
+    },
+
+    "learnMore": "Learn More"
+  },
+  "whyChooseUs": {
+    "successfulMoves": "Successful moves",
+    "yearsInUae": "Years in the UAE",
+    "eyebrow": "About Ala Kaifak",
+    "title": "Why Choose Us?",
+    "description": "From single-room apartments to full villa and corporate relocations, our trained crews handle every move across Abu Dhabi, Dubai and the wider UAE with care and precision.",
+    "cta": "Get a Free Quote",
+
+    "benefits": {
+      "professionalTeam": "Professional Moving Team",
+      "availability": "24/7 Availability",
+      "safeHandling": "Safe & Secure Handling",
+      "experiencedMovers": "Experienced Movers",
+      "ecoPacking": "Eco-Friendly Packing",
+      "uaeService": "UAE-Wide Service",
+      "onTimeDelivery": "On-Time Delivery",
+      "transparentQuotes": "Transparent Quotes"
+    },
+    "stats": {
+      "yearsExperience": "Years Experience",
+      "movesCompleted": "Moves Completed",
+      "support": "Support",
+      "customerExperience": "Customer Experience"
+    }
+  },
+  "howItWorks": {
+    "label": "How It Works",
+    "title": "Your Move In Four Simple Steps",
+    "description": "A clear, predictable process from first call to final box.",
+
+    "steps": {
+      "requestQuote": {
+        "title": "Request a Quote",
+        "description": "Share your moving details and get a transparent estimate fast."
+      },
+      "movingPlan": {
+        "title": "Get Your Moving Plan",
+        "description": "We schedule the crew, truck and materials around your date."
+      },
+      "packAndMove": {
+        "title": "We Pack & Move",
+        "description": "Our team packs, loads, transports and unloads with care."
+      },
+      "relaxEnjoy": {
+        "title": "Relax & Enjoy",
+        "description": "We reassemble your furniture so you can settle straight in."
+      }
+    }
+  },
+  "movingSolutions": {
+    "eyebrow": "Tailored Solutions",
+    "title": "Residential & Commercial Moving",
+    "description": "Two dedicated teams, one consistent standard of service.",
+    "home": {
+      "title": "Home Moving",
+      "description": "Villas, apartments and family homes moved with care from door to door.",
+      "items": [
+        "Apartments",
+        "Villas",
+        "Houses",
+        "Furniture",
+        "Packing",
+        "Unpacking"
+      ],
+      "button": "Explore Home Moving"
+    },
+    "office": {
+      "title": "Office & Commercial Moving",
+      "description": "Planned corporate relocations that keep your business running.",
+      "items": [
+        "Office relocation",
+        "Furniture",
+        "Equipment",
+        "Packing",
+        "Weekend moving",
+        "After-hours moving"
+      ],
+      "button": "Explore Office Moving"
+    }
+  },
+  "insideMove": {
+    "eyebrow": "Inside the Move",
+    "title": "From First Box To Final Assembly",
+    "description": "Every stage handled by trained movers using professional equipment.",
+    "items": {
+      "packing": "Packing",
+      "loading": "Loading",
+      "transportation": "Transportation",
+      "unloading": "Unloading",
+      "assembly": "Assembly"
+    }
+  },
+  "reviews": {
+    "eyebrow": "Reviews",
+    "title": "What Our Customers Say",
+    "description": "Families, expats and businesses across the UAE trust us with their move.",
+    "controls": {
+      "previous": "Previous reviews",
+      "next": "Next reviews"
+    },
+    "pagination": {
+      "goToPage": "Go to review page {{page}}"
+    },
+    "items": {
+      "1": {
+        "name": "James Whitmore",
+        "location": "Dubai Marina",
+        "content": "Best moving experience I've had as an expat in the UAE. Clear quote, no hidden fees, and the crew arrived exactly on time."
+      },
+      "2": {
+        "name": "Rana Khalil",
+        "location": "Al Ain",
+        "content": "We relocated our office over a weekend and were fully operational by Sunday morning. Zero downtime and nothing damaged."
+      },
+      "3": {
+        "name": "Omar Siddiqui",
+        "location": "Abu Dhabi",
+        "content": "Packed our apartment in three hours with proper materials. The fragile items arrived in Dubai without a single scratch."
+      },
+      "4": {
+        "name": "Maya Ahmed",
+        "location": "Jumeirah",
+        "content": "The entire moving process was smooth and professional. The team handled everything carefully and delivered on schedule."
+      },
+      "5": {
+        "name": "Daniel Khan",
+        "location": "Business Bay",
+        "content": "Excellent service from start to finish. Communication was clear, pricing was transparent, and the movers were very professional."
+      },
+      "6": {
+        "name": "Sara Ali",
+        "location": "Sharjah",
+        "content": "Very impressed with the service. Everything was packed securely and the team made our relocation completely stress-free."
+      }
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": {
+      "first": "Frequently Asked",
+      "second": "Questions"
+    },
+    "description": "Everything you need to know before booking your move. Still unsure? Our team is one call away.",
+    "items": {
+      "movingCost": {
+        "question": "How much does moving cost?",
+        "answer": "Pricing depends on the size of your home or office, the distance, and the services you need such as packing or assembly. Share a few details and we'll send a transparent, fixed quote with no hidden fees."
+      },
+      "packingServices": {
+        "question": "Do you provide packing services?",
+        "answer": "Yes. Our professional team can pack your belongings using high-quality materials to help keep everything safe during transportation."
+      },
+      "villasApartments": {
+        "question": "Do you move villas and apartments?",
+        "answer": "Yes. We handle residential moves of all sizes, including apartments, villas, studios, and larger homes across the UAE."
+      },
+      "officeRelocation": {
+        "question": "Do you provide office relocation?",
+        "answer": "Yes. We provide complete office relocation services, including packing, furniture dismantling, transportation, and reassembly."
+      },
+      "weekends": {
+        "question": "Do you operate on weekends?",
+        "answer": "Yes. We operate seven days a week and can arrange your move around your preferred schedule, including weekends."
+      },
+      "moving247": {
+        "question": "Do you provide 24/7 moving?",
+        "answer": "We offer flexible moving availability throughout the day. Contact our team with your preferred date and time and we'll help arrange the most suitable option."
+      },
+      "abuDhabiDubai": {
+        "question": "Do you move between Abu Dhabi and Dubai?",
+        "answer": "Yes. We provide moving services between Abu Dhabi, Dubai, and other locations across the UAE."
+      },
+      "freeQuote": {
+        "question": "How can I get a free quote?",
+        "answer": "Simply contact our team and share a few details about your move. We'll review your requirements and provide you with a clear, transparent quote."
+      }
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": {
+      "first": "Frequently Asked",
+      "second": "Questions"
+    },
+    "description": "Everything you need to know before booking your move. Still unsure? Our team is one call away.",
+    "items": {
+      "movingCost": {
+        "question": "How much does moving cost?",
+        "answer": "Pricing depends on the size of your home or office, the distance, and the services you need such as packing or assembly. Share a few details and we'll send a transparent, fixed quote with no hidden fees."
+      },
+      "packingServices": {
+        "question": "Do you provide packing services?",
+        "answer": "Yes. Our professional team can pack your belongings using high-quality materials to help keep everything safe during transportation."
+      },
+      "villasApartments": {
+        "question": "Do you move villas and apartments?",
+        "answer": "Yes. We handle residential moves of all sizes, including apartments, villas, studios, and larger homes across the UAE."
+      },
+      "officeRelocation": {
+        "question": "Do you provide office relocation?",
+        "answer": "Yes. We provide complete office relocation services, including packing, furniture dismantling, transportation, and reassembly."
+      },
+      "weekends": {
+        "question": "Do you operate on weekends?",
+        "answer": "Yes. We operate seven days a week and can arrange your move around your preferred schedule, including weekends."
+      },
+      "moving247": {
+        "question": "Do you provide 24/7 moving?",
+        "answer": "We offer flexible moving availability throughout the day. Contact our team with your preferred date and time and we'll help arrange the most suitable option."
+      },
+      "abuDhabiDubai": {
+        "question": "Do you move between Abu Dhabi and Dubai?",
+        "answer": "Yes. We provide moving services between Abu Dhabi, Dubai, and other locations across the UAE."
+      },
+      "freeQuote": {
+        "question": "How can I get a free quote?",
+        "answer": "Simply contact our team and share a few details about your move. We'll review your requirements and provide you with a clear, transparent quote."
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready For A Stress-Free Move?",
+    "description": "Let our professional team handle the heavy lifting.",
+    "getFreeQuote": "Get a Free Quote",
+    "callUsNow": "Call Us Now",
+    "availability": "AVAILABLE 24/7",
+    "locations": {
+      "abuDhabi": "ABU DHABI",
+      "dubai": "DUBAI",
+      "uae": "UAE"
+    }
+  },
+  "footer": {
+    "brand": {
+      "name": "Ala Kaifak",
+      "tagline": "MOVING & RELOCATION",
+      "description": "Professional home and office relocation across Abu Dhabi, Dubai and the UAE. Packing, moving, assembly and transportation handled by one trusted team."
+    },
+
+    "quickLinks": {
+      "title": "QUICK LINKS",
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "reviews": "Reviews",
+      "contact": "Contact"
+    },
+
+    "services": {
+      "title": "SERVICES",
+      "homeMoving": "Home Moving",
+      "officeMoving": "Office Moving",
+      "packing": "Packing",
+      "furnitureMoving": "Furniture Moving",
+      "transportation": "Transportation"
+    },
+
+    "contact": {
+      "title": "CONTACT",
+      "country": "United Arab Emirates"
+    },
+
+    "legal": {
+      "copyright": "© 2026 EmiratesMove. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms & Conditions"
+    }
+  }
+}

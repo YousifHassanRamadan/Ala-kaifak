@@ -1,8 +1,12 @@
+"use client";
+
+import { useTranslation } from "react-i18next";
 import { movingSolutions } from "@/constant/moving-solutions";
 
 import { MovingSolutionCard } from "./MovingSolutionCard";
 
 export function MovingSolutions() {
+  const { t } = useTranslation();
   return (
     <section
       id="moving-solutions"
@@ -34,7 +38,7 @@ export function MovingSolutions() {
               text-brand-blue
             "
           >
-            Tailored Solutions
+            {t("movingSolutions.eyebrow")}
           </p>
 
           <h2
@@ -48,7 +52,7 @@ export function MovingSolutions() {
               lg:text-[40px]
             "
           >
-            Residential & Commercial Moving
+            {t("movingSolutions.title")}
           </h2>
 
           <p
@@ -60,7 +64,7 @@ export function MovingSolutions() {
               sm:text-base
             "
           >
-            Two dedicated teams, one consistent standard of service.
+            {t("movingSolutions.description")}
           </p>
         </div>
 
@@ -78,12 +82,16 @@ export function MovingSolutions() {
         >
           {movingSolutions.map((solution) => (
             <MovingSolutionCard
-              key={solution.title}
-              title={solution.title}
-              description={solution.description}
+              key={solution.key}
+              title={t(`movingSolutions.${solution.key}.title`)}
+              description={t(`movingSolutions.${solution.key}.description`)}
               icon={solution.icon}
-              items={solution.items}
-              buttonText={solution.buttonText}
+              items={
+                t(`movingSolutions.${solution.key}.items`, {
+                  returnObjects: true,
+                }) as string[]
+              }
+              buttonText={t(`movingSolutions.${solution.key}.button`)}
               variant={solution.variant}
             />
           ))}

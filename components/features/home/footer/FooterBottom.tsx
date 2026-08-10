@@ -1,7 +1,10 @@
+"use client";
+import { useTranslation } from "react-i18next";
 import { FOOTER_CONTENT } from "@/constant/footer";
 import Link from "next/link";
 
 export function FooterBottom() {
+  const { t } = useTranslation();
   const { legal } = FOOTER_CONTENT;
 
   return (
@@ -24,7 +27,7 @@ export function FooterBottom() {
           sm:justify-between
         "
       >
-        <p className="text-white/55">{legal.copyright}</p>
+        <p className="text-white/55">{t(legal.copyright)}</p>
 
         <div
           className="
@@ -43,7 +46,7 @@ export function FooterBottom() {
               hover:text-primary
             "
           >
-            {legal.privacy}
+            {t(legal.privacy)}
           </Link>
 
           <Link
@@ -54,7 +57,7 @@ export function FooterBottom() {
               hover:text-primary
             "
           >
-            {legal.terms}
+            {t(legal.terms)}
           </Link>
         </div>
       </div>

@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
+
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/features/home/footer/Footer";
 import { Toaster } from "@/components/ui/sonner";
 import { WhatsAppButton } from "@/components/shared/whatsapp-button/WhatsAppButton";
+import { I18nProvider } from "@/i18n/I18nProvider";
 
 export const metadata: Metadata = {
   title: "Ala Kaifak | Moving & Relocation",
@@ -17,16 +19,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" dir="ltr">
       <body>
-        <Header />
+        <I18nProvider>
+          <Header />
 
-        <main className="pb-20 lg:pb-0">{children}</main>
+          <main className="pb-20 lg:pb-0">{children}</main>
 
-        <WhatsAppButton />
-        <Toaster />
+          <WhatsAppButton />
 
-        <Footer />
+          <Toaster />
+
+          <Footer />
+        </I18nProvider>
       </body>
     </html>
   );

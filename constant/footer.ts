@@ -1,53 +1,52 @@
 export const FOOTER_CONTENT = {
   brand: {
-    name: "Ala Kaifak",
-    tagline: "MOVING & RELOCATION",
-    description:
-      "Professional home and office relocation across Abu Dhabi, Dubai and the UAE. Packing, moving, assembly and transportation handled by one trusted team.",
+    name: "footer.brand.name",
+    tagline: "footer.brand.tagline",
+    description: "footer.brand.description",
   },
 
   quickLinks: [
     {
-      label: "Home",
+      label: "footer.quickLinks.home",
       targetId: "home",
     },
     {
-      label: "About",
+      label: "footer.quickLinks.about",
       targetId: "about",
     },
     {
-      label: "Services",
+      label: "footer.quickLinks.services",
       targetId: "services",
     },
     {
-      label: "Reviews",
+      label: "footer.quickLinks.reviews",
       targetId: "reviews",
     },
     {
-      label: "Contact",
+      label: "footer.quickLinks.contact",
       targetId: "contact",
     },
   ],
 
   services: [
     {
-      label: "Home Moving",
+      label: "footer.services.homeMoving",
       targetId: "services",
     },
     {
-      label: "Office Moving",
+      label: "footer.services.officeMoving",
       targetId: "services",
     },
     {
-      label: "Packing",
+      label: "footer.services.packing",
       targetId: "services",
     },
     {
-      label: "Furniture Moving",
+      label: "footer.services.furnitureMoving",
       targetId: "services",
     },
     {
-      label: "Transportation",
+      label: "footer.services.transportation",
       targetId: "services",
     },
   ],
@@ -60,12 +59,12 @@ export const FOOTER_CONTENT = {
     emailHref: "mailto:info@alakaifakmover.com",
 
     locations: ["Abu Dhabi", "Dubai"],
-    country: "United Arab Emirates",
+    country: "footer.contact.country",
   },
 
   legal: {
-    copyright: "© 2026 EmiratesMove. All rights reserved.",
-    privacy: "Privacy Policy",
-    terms: "Terms & Conditions",
+    copyright: "footer.legal.copyright",
+    privacy: "footer.legal.privacy",
+    terms: "footer.legal.terms",
   },
 } as const;

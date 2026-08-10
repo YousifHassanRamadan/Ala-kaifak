@@ -1,37 +1,37 @@
 export const quoteInputs = [
   {
     name: "firstName",
-    label: "First Name",
-    placeholder: "Ahmed",
+    label: "quote.form.firstName.label",
+    placeholder: "quote.form.firstName.placeholder",
     type: "text",
   },
   {
     name: "lastName",
-    label: "Last Name",
-    placeholder: "Al Mansoori",
+    label: "quote.form.lastName.label",
+    placeholder: "quote.form.lastName.placeholder",
     type: "text",
   },
   {
     name: "phone",
-    label: "Phone Number",
-    placeholder: "+971 50 000 0000",
+    label: "quote.form.phone.label",
+    placeholder: "quote.form.phone.placeholder",
     type: "tel",
   },
   {
     name: "moveFrom",
-    label: "Move From",
-    placeholder: "Abu Dhabi, Al Reem",
+    label: "quote.form.moveFrom.label",
+    placeholder: "quote.form.moveFrom.placeholder",
     type: "text",
   },
   {
     name: "moveTo",
-    label: "Move To",
-    placeholder: "Dubai, Marina",
+    label: "quote.form.moveTo.label",
+    placeholder: "quote.form.moveTo.placeholder",
     type: "text",
   },
   {
     name: "movingDate",
-    label: "Moving Date",
+    label: "quote.form.movingDate.label",
     placeholder: "",
     type: "date",
   },
@@ -40,22 +40,22 @@ export const quoteInputs = [
 export const serviceTypes = [
   {
     value: "home-moving",
-    label: "Home Moving",
+    label: "quote.form.services.homeMoving",
   },
   {
     value: "office-moving",
-    label: "Office Moving",
+    label: "quote.form.services.officeMoving",
   },
   {
     value: "villa-moving",
-    label: "Villa Moving",
+    label: "quote.form.services.villaMoving",
   },
   {
     value: "packing",
-    label: "Packing Services",
+    label: "quote.form.services.packing",
   },
   {
     value: "storage",
-    label: "Storage",
+    label: "quote.form.services.storage",
   },
 ];

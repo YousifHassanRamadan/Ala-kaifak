@@ -8,7 +8,6 @@ import {
   Sheet,
   SheetContent,
   SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { navItems } from "@/constant/links";
@@ -18,10 +17,14 @@ import logo from "@/assets/alakeifak-logo.png";
 
 import Image from "next/image";
 import { useState } from "react";
+import { LanguageSwitcher } from "../features/language-switcher/language-switcher";
+import { useTranslation } from "react-i18next";
 
 const phoneNumber = "+971 508 199 942";
 
 export function Header() {
+  const { t } = useTranslation();
+
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -39,7 +42,7 @@ export function Header() {
               className="h-auto w-[50px] rounded-xl object-contain sm:w-[55px]"
             />
 
-            <span className="uppercase">Ala Kaifak</span>
+            <span className="uppercase">{t("header.brand.name")}</span>
           </ScrollToSection>
 
           {/* Desktop Navigation */}
@@ -65,11 +68,10 @@ export function Header() {
                   hover:after:w-full
                 "
               >
-                {item.label}
+                {t(item.label)}
               </ScrollToSection>
             ))}
           </nav>
-
           {/* Desktop Right Side */}
           <div className="hidden items-center gap-5 lg:flex">
             <a
@@ -84,26 +86,8 @@ export function Header() {
               {phoneNumber}
             </a>
 
-            <Button
-              asChild
-              className="
-                h-[52px]
-                rounded-[14px]
-                bg-[#F79000]
-                px-7
-                text-[15px]
-                font-semibold
-                text-black
-                shadow-[0_8px_20px_rgba(247,144,0,0.25)]
-                hover:bg-[#e98500]
-              "
-            >
-              <ScrollToSection targetId="quote">
-                Get a Free Quote
-              </ScrollToSection>
-            </Button>
+            <LanguageSwitcher />
           </div>
-
           {/* Mobile Controls */}
           <div className="flex items-center gap-2 lg:hidden">
             {/* Phone */}
@@ -174,6 +158,9 @@ export function Header() {
                         <span className="uppercase">Ala Kaifak</span>
                       </ScrollToSection>
                     </div>
+
+                    {/* Language Switcher */}
+                    <LanguageSwitcher />
                   </div>
                 </SheetHeader>
 
@@ -198,7 +185,7 @@ export function Header() {
                         "
                         onClick={() => setOpen(false)}
                       >
-                        {item.label}
+                        {t(item.label)}
                       </ScrollToSection>
                     ))}
                   </nav>

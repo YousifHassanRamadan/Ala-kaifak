@@ -1,3 +1,5 @@
+"use client";
+import { useTranslation } from "react-i18next";
 import Image, { StaticImageData } from "next/image";
 
 interface GalleryItem {
@@ -10,6 +12,7 @@ interface InsideMoveGalleryProps {
 }
 
 export function InsideMoveGallery({ items }: InsideMoveGalleryProps) {
+  const { t } = useTranslation();
   const featured = items[0];
   const secondaryItems = items.slice(1);
 
@@ -35,6 +38,7 @@ function GalleryImage({
   item: GalleryItem;
   featured?: boolean;
 }) {
+  const { t } = useTranslation();
   return (
     <div
       className={`group relative overflow-hidden rounded-2xl ${
@@ -59,7 +63,7 @@ function GalleryImage({
       {/* Label */}
       <div className="absolute bottom-3 left-3">
         <span className="inline-flex rounded-full bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-brand-navy shadow-sm">
-          {item.title}
+          {t(item.title)}
         </span>
       </div>
     </div>

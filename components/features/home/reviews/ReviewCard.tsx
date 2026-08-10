@@ -1,10 +1,14 @@
+"use client";
+
 import { Review } from "@/constant/reviews";
+import { useTranslation } from "react-i18next";
 
 interface ReviewCardProps {
   review: Review;
 }
 
 export function ReviewCard({ review }: ReviewCardProps) {
+  const { t } = useTranslation();
   return (
     <article
       className="
@@ -52,7 +56,7 @@ export function ReviewCard({ review }: ReviewCardProps) {
 
       {/* Review */}
       <p className="text-sm leading-5 text-foreground">
-        &quot;{review.content}&quot;
+        &quot;{t(review.content)}&quot;
       </p>
 
       {/* Divider */}
@@ -76,11 +80,11 @@ export function ReviewCard({ review }: ReviewCardProps) {
 
         <div className="min-w-0">
           <p className="truncate text-xs font-bold text-foreground sm:text-sm">
-            {review.name}
+            {t(review.name)}
           </p>
 
           <p className="mt-0.5 text-[11px] text-muted-foreground sm:text-xs">
-            {review.location}
+            {t(review.location)}
           </p>
         </div>
       </div>

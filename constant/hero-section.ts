@@ -3,18 +3,18 @@ import { Clock3, MapPin, ShieldCheck, Users } from "lucide-react";
 export const heroFeatures = [
   {
     icon: Clock3,
-    label: "24/7 Service",
+    translationKey: "hero.features.service24",
   },
   {
     icon: Users,
-    label: "Professional Team",
+    translationKey: "hero.features.professionalTeam",
   },
   {
     icon: ShieldCheck,
-    label: "Safe & Secure Moving",
+    translationKey: "hero.features.safeSecure",
   },
   {
     icon: MapPin,
-    label: "UAE-Wide Coverage",
+    translationKey: "hero.features.uaeCoverage",
   },
 ];

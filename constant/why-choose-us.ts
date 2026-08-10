@@ -11,35 +11,35 @@ import {
 
 export const benefits = [
   {
-    label: "Professional Moving Team",
+    key: "professionalTeam",
     icon: Users,
   },
   {
-    label: "24/7 Availability",
+    key: "availability",
     icon: Clock3,
   },
   {
-    label: "Safe & Secure Handling",
+    key: "safeHandling",
     icon: ShieldCheck,
   },
   {
-    label: "Experienced Movers",
+    key: "experiencedMovers",
     icon: BadgeCheck,
   },
   {
-    label: "Eco-Friendly Packing",
+    key: "ecoPacking",
     icon: Leaf,
   },
   {
-    label: "UAE-Wide Service",
+    key: "uaeService",
     icon: Truck,
   },
   {
-    label: "On-Time Delivery",
+    key: "onTimeDelivery",
     icon: Zap,
   },
   {
-    label: "Transparent Quotes",
+    key: "transparentQuotes",
     icon: WalletCards,
   },
 ];
@@ -47,18 +47,18 @@ export const benefits = [
 export const stats = [
   {
     value: "10+",
-    label: "Years Experience",
+    key: "yearsExperience",
   },
   {
     value: "5000+",
-    label: "Moves Completed",
+    key: "movesCompleted",
   },
   {
     value: "24/7",
-    label: "Support",
+    key: "support",
   },
   {
     value: "5-Star",
-    label: "Customer Experience",
+    key: "customerExperience",
   },
 ];

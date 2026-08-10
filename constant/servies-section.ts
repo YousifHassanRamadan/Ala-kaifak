@@ -2,35 +2,27 @@ import { Armchair, Box, Building2, House, Truck, Wrench } from "lucide-react";
 
 export const services = [
   {
-    title: "Home Moving",
-    description:
-      "Professional apartment, villa and residential moving services.",
+    key: "homeMoving",
     icon: House,
   },
   {
-    title: "Office Relocation",
-    description:
-      "Efficient office moving designed to minimize business downtime.",
+    key: "officeRelocation",
     icon: Building2,
   },
   {
-    title: "Packing & Unpacking",
-    description: "Careful packing and unpacking using professional materials.",
+    key: "packing",
     icon: Box,
   },
   {
-    title: "Furniture Moving",
-    description: "Safe transportation of furniture and valuable belongings.",
+    key: "furnitureMoving",
     icon: Armchair,
   },
   {
-    title: "Assembly & Disassembly",
-    description: "Professional furniture disassembly and reassembly.",
+    key: "assembly",
     icon: Wrench,
   },
   {
-    title: "Loading & Transportation",
-    description: "Secure loading, transportation and unloading across the UAE.",
+    key: "transportation",
     icon: Truck,
   },
 ];

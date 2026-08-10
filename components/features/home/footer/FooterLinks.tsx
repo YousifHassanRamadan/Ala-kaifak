@@ -1,9 +1,16 @@
+"use client";
+import { useTranslation } from "react-i18next";
+
 import { FOOTER_CONTENT } from "@/constant/footer";
 import { ScrollToSection } from "../../scroll-to-section/scroll-to-section";
 
 export function FooterLinks() {
+  const { t } = useTranslation();
   return (
-    <FooterLinkColumn title="QUICK LINKS" links={FOOTER_CONTENT.quickLinks} />
+    <FooterLinkColumn
+      title={t("footer.quickLinks.title")}
+      links={FOOTER_CONTENT.quickLinks}
+    />
   );
 }
 
@@ -16,6 +23,7 @@ interface FooterLinkColumnProps {
 }
 
 function FooterLinkColumn({ title, links }: FooterLinkColumnProps) {
+  const { t } = useTranslation();
   return (
     <div>
       <h3
@@ -26,7 +34,7 @@ function FooterLinkColumn({ title, links }: FooterLinkColumnProps) {
           text-white
         "
       >
-        {title}
+        {t(title)}
       </h3>
 
       <nav className="mt-7 flex flex-col items-start gap-4">
@@ -45,7 +53,7 @@ function FooterLinkColumn({ title, links }: FooterLinkColumnProps) {
               focus-visible:text-primary
             "
           >
-            {link.label}
+            {t(link.label)}
           </ScrollToSection>
         ))}
       </nav>

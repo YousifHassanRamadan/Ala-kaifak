@@ -1,6 +1,10 @@
+"use client";
+
+import { useTranslation } from "react-i18next";
 import { HowItWorksSteps } from "./HowItWorksSteps";
 
 export function HowItWorks() {
+  const { t } = useTranslation();
   return (
     <section
       id="how-it-works"
@@ -32,7 +36,7 @@ export function HowItWorks() {
               text-brand-blue
             "
           >
-            How It Works
+            {t("howItWorks.label")}
           </p>
 
           <h2
@@ -46,7 +50,7 @@ export function HowItWorks() {
               lg:text-[40px]
             "
           >
-            Your Move In Four Simple Steps
+            {t("howItWorks.title")}
           </h2>
 
           <p
@@ -60,7 +64,7 @@ export function HowItWorks() {
               sm:text-base
             "
           >
-            A clear, predictable process from first call to final box.
+            {t("howItWorks.description")}
           </p>
         </div>
 

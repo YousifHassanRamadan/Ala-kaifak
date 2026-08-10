@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslation } from "react-i18next";
 import { Phone } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -6,6 +9,7 @@ import { ScrollToSection } from "../../scroll-to-section/scroll-to-section";
 const phoneNumber = "+971 508 199 942";
 
 export function HeroActions() {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col gap-3 sm:flex-row">
       {/* Get a Free Quote */}
@@ -24,7 +28,9 @@ export function HeroActions() {
           hover:bg-primary/90
         "
       >
-        <ScrollToSection targetId="quote">Get a Free Quote</ScrollToSection>
+        <ScrollToSection targetId="quote">
+          {t("hero.actions.quote")}
+        </ScrollToSection>
       </Button>
 
       {/* Call Us */}
@@ -47,7 +53,7 @@ export function HeroActions() {
       >
         <a href={`tel:${phoneNumber.replace(/\s/g, "")}`}>
           <Phone className="mr-2 h-[18px] w-[18px]" />
-          Call Us Now
+          {t("hero.actions.call")}
         </a>
       </Button>
     </div>

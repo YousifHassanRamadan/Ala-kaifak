@@ -1,8 +1,8 @@
 export const navItems = [
-  { label: "Home", href: "home" },
-  { label: "Services", href: "services" },
-  { label: "Why Choose Us", href: "why-choose-us" },
-  { label: "How It Works", href: "how-it-works" },
-  { label: "Reviews", href: "reviews" },
-  { label: "Contact", href: "contact" },
+  { label: "header.nav.home", href: "home" },
+  { label: "header.nav.services", href: "services" },
+  { label: "header.nav.whyChooseUs", href: "why-choose-us" },
+  { label: "header.nav.howItWorks", href: "how-it-works" },
+  { label: "header.nav.reviews", href: "reviews" },
+  { label: "header.nav.contact", href: "contact" },
 ];

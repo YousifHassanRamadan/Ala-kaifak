@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslation } from "react-i18next";
 import {
   Accordion,
   AccordionContent,
@@ -7,6 +10,7 @@ import {
 import { faqs } from "@/constant/faq";
 
 export function FAQSection() {
+  const { t } = useTranslation();
   return (
     <section
       id="faq"
@@ -38,7 +42,7 @@ export function FAQSection() {
               text-brand-orange
             "
           >
-            FAQ
+            {t("faq.eyebrow")}
           </p>
 
           <h2
@@ -53,9 +57,9 @@ export function FAQSection() {
               lg:text-[34px]
             "
           >
-            Frequently Asked
+            {t("faq.title.first")}
             <br className="hidden sm:block" />
-            Questions
+            {t("faq.title.second")}
           </h2>
 
           <p
@@ -68,8 +72,7 @@ export function FAQSection() {
               sm:text-[15px]
             "
           >
-            Everything you need to know before booking your move. Still unsure?
-            Our team is one call away.
+            {t("faq.description")}
           </p>
         </div>
 
@@ -114,7 +117,7 @@ export function FAQSection() {
                   [&>svg]:text-muted-foreground
                 "
               >
-                {faq.question}
+                {t(faq.question)}
               </AccordionTrigger>
 
               <AccordionContent
@@ -128,7 +131,7 @@ export function FAQSection() {
                   sm:text-[13px]
                 "
               >
-                <p className="max-w-[680px]">{faq.answer}</p>
+                <p className="max-w-[680px]">{t(faq.answer)}</p>
               </AccordionContent>
             </AccordionItem>
           ))}
