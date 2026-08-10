@@ -1,26 +1,327 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* ================================
+     Shadcn / Semantic Colors
+     ================================ */
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* ================================
+     Brand Colors
+     ================================ */
+
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-navy-light: var(--brand-navy-light);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-orange-dark: var(--brand-orange-dark);
+
+  /* ================================
+     Neutral / Surface Colors
+     ================================ */
+
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border-light: var(--border-light);
+
+  /* ================================
+     Utility Colors
+     ================================ */
+
+  --color-whatsapp: var(--whatsapp);
+
+  /* ================================
+     Charts
+     ================================ */
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* ================================
+     Fonts
+     ================================ */
+
+  --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-sans);
+
+  /* ================================
+     Radius
+     ================================ */
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* ================================
+     Sidebar
+     ================================ */
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* =========================================================
+   LIGHT THEME
+   ========================================================= */
+
+:root {
+  /* ================================
+     Main
+     ================================ */
+
+  --background: #ffffff;
+  --foreground: #10264b;
+
+  /* ================================
+     Brand
+     ================================ */
+
+  --brand-navy: #10264b;
+  --brand-navy-light: #1a3765;
+
+  --brand-orange: #f79000;
+  --brand-orange-dark: #e98500;
+
+  /* ================================
+     Surfaces
+     ================================ */
+
+  --surface: #ffffff;
+  --surface-muted: #f5f7fa;
+
+  /* ================================
+     Text
+     ================================ */
+
+  --text-primary: #10264b;
+  --text-secondary: #5f6877;
+  --text-muted: #697586;
+
+  /* ================================
+     Borders
+     ================================ */
+
+  --border: #e7ebf0;
+  --border-light: #dce2ea;
+  --input: #dce2ea;
+
+  /* ================================
+     Shadcn Primary
+     ================================ */
+
+  --primary: #f79000;
+  --primary-foreground: #000000;
+
+  /* ================================
+     Secondary
+     ================================ */
+
+  --secondary: #10264b;
+  --secondary-foreground: #ffffff;
+
+  /* ================================
+     Muted
+     ================================ */
+
+  --muted: #f5f7fa;
+  --muted-foreground: #697586;
+
+  /* ================================
+     Accent
+     ================================ */
+
+  --accent: #fff4e5;
+  --accent-foreground: #10264b;
+
+  /* ================================
+     Card
+     ================================ */
+
+  --card: #ffffff;
+  --card-foreground: #10264b;
+
+  /* ================================
+     Popover
+     ================================ */
+
+  --popover: #ffffff;
+  --popover-foreground: #10264b;
+
+  /* ================================
+     Focus
+     ================================ */
+
+  --ring: #f79000;
+
+  /* ================================
+     Destructive
+     ================================ */
+
+  --destructive: #dc2626;
+
+  /* ================================
+     WhatsApp
+     ================================ */
+
+  --whatsapp: #10a957;
+
+  /* ================================
+     Charts
+     ================================ */
+
+  --chart-1: #f79000;
+  --chart-2: #10264b;
+  --chart-3: #5f6877;
+  --chart-4: #697586;
+  --chart-5: #dce2ea;
+
+  /* ================================
+     Radius
+     ================================ */
+
+  --radius: 0.75rem;
+
+  /* ================================
+     Sidebar
+     ================================ */
+
+  --sidebar: #ffffff;
+  --sidebar-foreground: #10264b;
+  --sidebar-primary: #f79000;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #fff4e5;
+  --sidebar-accent-foreground: #10264b;
+  --sidebar-border: #e7ebf0;
+  --sidebar-ring: #f79000;
+}
+
+/* =========================================================
+   DARK THEME
+   ========================================================= */
+
+.dark {
+  --background: #0b1830;
+  --foreground: #ffffff;
+
+  --brand-navy: #10264b;
+  --brand-navy-light: #1a3765;
+
+  --brand-orange: #f79000;
+  --brand-orange-dark: #e98500;
+
+  --surface: #10264b;
+  --surface-muted: #142b50;
+
+  --text-primary: #ffffff;
+  --text-secondary: #dce2ea;
+  --text-muted: #aab4c2;
+
+  --card: #10264b;
+  --card-foreground: #ffffff;
+
+  --popover: #10264b;
+  --popover-foreground: #ffffff;
+
+  --primary: #f79000;
+  --primary-foreground: #000000;
+
+  --secondary: #1a3765;
+  --secondary-foreground: #ffffff;
+
+  --muted: #142b50;
+  --muted-foreground: #aab4c2;
+
+  --accent: #1a3765;
+  --accent-foreground: #ffffff;
+
+  --border: #294264;
+  --border-light: #385474;
+  --input: #385474;
+
+  --ring: #f79000;
+
+  --destructive: #ef4444;
+
+  --whatsapp: #10a957;
+
+  --chart-1: #f79000;
+  --chart-2: #ffffff;
+  --chart-3: #aab4c2;
+  --chart-4: #697586;
+  --chart-5: #385474;
+
+  --sidebar: #10264b;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #f79000;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #1a3765;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #294264;
+  --sidebar-ring: #f79000;
+}
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  html {
+    @apply font-sans scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  button,
+  a {
+    @apply transition-colors;
+  }
 }
