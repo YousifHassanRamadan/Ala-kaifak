@@ -38,7 +38,13 @@
       }
     },
     "actions": { "quote": "Get a Free Quote", "call": "Call Us Now" },
-    "badge": "Trusted Moving Company in UAE"
+    "badge": "Trusted Moving Company in UAE",
+    "imageCard": {
+      "title": "Need to move?",
+      "description": "Get your free quote today",
+      "fastResponse": "Fast response",
+      "professionalService": "Professional service"
+    }
   },
   "quote": {
     "info": {
