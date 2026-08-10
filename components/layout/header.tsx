@@ -155,7 +155,9 @@ export function Header() {
                           className="h-auto w-[50px] rounded-xl object-contain sm:w-[55px]"
                         />
 
-                        <span className="uppercase">Ala Kaifak</span>
+                        <span className="uppercase">
+                          {t("common.brandName")}
+                        </span>
                       </ScrollToSection>
                     </div>
 
@@ -210,7 +212,7 @@ export function Header() {
                       targetId="quote"
                       onClick={() => setOpen(false)}
                     >
-                      Get a Free Quote
+                      {t("common.getFreeQuote")}
                     </ScrollToSection>
                   </Button>
                 </div>
@@ -302,7 +304,9 @@ export function Header() {
             hover:bg-[#e98500]
           "
         >
-          <ScrollToSection targetId="quote">Get a Free Quote</ScrollToSection>
+          <ScrollToSection targetId="quote">
+            {t("common.getFreeQuote")}
+          </ScrollToSection>
         </Button>
       </div>
     </>
