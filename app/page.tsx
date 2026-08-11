@@ -1,3 +1,4 @@
+import { ClientsSection } from "@/components/features/home/clients/ClientsSection";
 import { CTASection } from "@/components/features/home/cta/CTASection";
 import { FAQSection } from "@/components/features/home/faq/FAQSection";
 import { Hero } from "@/components/features/home/hero/Hero";
@@ -13,18 +14,37 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div>
+      {/* Hero */}
       <Hero />
+
+      {/* Quote */}
       <QuoteSection />
+
+      {/* Services */}
       <ServicesSection />
+
+      {/* Clients */}
+      <ClientsSection />
+
+      {/* Why Choose Us */}
       <WhyChooseUs />
 
+      {/* How It Works */}
       <HowItWorks />
 
+      {/* Moving Solutions */}
       <MovingSolutions />
 
+      {/* Inside The Move */}
       <InsideMoveSection />
+
+      {/* Reviews */}
       <ReviewsSection />
+
+      {/* FAQ */}
       <FAQSection />
+
+      {/* CTA */}
       <CTASection />
     </div>
   );

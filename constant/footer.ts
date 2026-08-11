@@ -52,8 +52,20 @@ export const FOOTER_CONTENT = {
   ],
 
   contact: {
-    phone: "+971508 199 942",
-    phoneHref: "tel:+971508199942",
+    phones: [
+      {
+        number: "+971 509 100 787",
+        href: "tel:+971509100787",
+      },
+      {
+        number: "+971 255 291 91",
+        href: "tel:+97125529191",
+      },
+      {
+        number: "+971 508 199 942",
+        href: "tel:+971508199942",
+      },
+    ],
 
     email: "info@alakaifakmover.com",
     emailHref: "mailto:info@alakaifakmover.com",

@@ -362,5 +362,18 @@
   "common": {
     "getFreeQuote": "احصل على عرض سعر مجاني",
     "brandName": "عَ الكيفك"
+  },
+  "clients": {
+    "eyebrow": "عملاؤنا الموثوقون",
+    "title": "نفخر بثقة الجهات والمؤسسات الرائدة",
+    "description": "نفخر بخدمة عدد من الجهات الحكومية والمؤسسات الرائدة في دولة الإمارات.",
+    "items": {
+      "abuDhabiPolice": "القيادة العامة لشرطة أبوظبي",
+      "abuDhabiQuality": "مجلس أبوظبي للجودة والمطابقة",
+      "higherColleges": "كليات التقنية العليا",
+      "ministryOfCulture": "وزارة الثقافة",
+      "federalYouthAuthority": "المؤسسة الاتحادية للشباب",
+      "integratedTransport": "مركز النقل المتكامل (ITC)"
+    }
   }
 }

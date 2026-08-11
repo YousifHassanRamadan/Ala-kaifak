@@ -21,7 +21,7 @@ export function FooterBrand() {
         <Image
           src={footerLogo}
           alt="Ala Kaifak Furniture Movers"
-          className="h-auto w-[55px] rounded-xl object-contain"
+          className="h-auto w-[100px] rounded-xl object-contain"
           priority
         />
 

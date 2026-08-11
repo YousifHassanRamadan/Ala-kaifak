@@ -22,6 +22,8 @@ import { useTranslation } from "react-i18next";
 
 const phoneNumber = "+971 508 199 942";
 
+const hotLine = "+971 509 100 787";
+
 export function Header() {
   const { t } = useTranslation();
 
@@ -39,7 +41,7 @@ export function Header() {
               src={logo}
               alt="Ala Kaifak Furniture Movers"
               priority
-              className="h-auto w-[50px] rounded-xl object-contain sm:w-[55px]"
+              className="h-auto w-[80px] rounded-xl object-contain sm:w-[100px]"
             />
 
             <span className="uppercase">{t("header.brand.name")}</span>
@@ -152,7 +154,7 @@ export function Header() {
                           src={logo}
                           alt="Ala Kaifak Furniture Movers"
                           priority
-                          className="h-auto w-[50px] rounded-xl object-contain sm:w-[55px]"
+                          className="h-auto w-[80px] rounded-xl object-contain sm:w-[90px]"
                         />
 
                         <span className="uppercase">
@@ -257,7 +259,7 @@ export function Header() {
             shadow-sm
           "
         >
-          <a href={`tel:${phoneNumber.replace(/\s/g, "")}`}>
+          <a href={`tel:${hotLine.replace(/\s/g, "")}`}>
             <Phone className="h-5 w-5" />
             <span className="sr-only">Call us</span>
           </a>
@@ -280,7 +282,7 @@ export function Header() {
           "
         >
           <a
-            href="https://wa.me/971501234567"
+            href={`https://wa.me/971508199942`}
             target="_blank"
             rel="noopener noreferrer"
           >
