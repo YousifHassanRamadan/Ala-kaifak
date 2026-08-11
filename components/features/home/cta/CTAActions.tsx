@@ -53,7 +53,7 @@ export function CTAActions() {
       </ScrollToSection>
 
       <a
-        href={CTA_CONTENT.phoneHref}
+        href={CTA_CONTENT.phones[0].href}
         className="
           inline-flex
           h-14
