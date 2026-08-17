@@ -25,9 +25,12 @@ const phoneNumber = "+971 508 199 942";
 const hotLine = "+971 509 100 787";
 
 export function Header() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const [open, setOpen] = useState(false);
+
+  const isArabic = i18n.language === "ar";
+
   return (
     <>
       <header className="sticky top-0 z-50 w-full border-b bg-white">
@@ -52,9 +55,10 @@ export function Header() {
             {navItems.map((item, i) => (
               <ScrollToSection
                 key={i}
-                targetId={`${item.href}`}
+                targetId={item.href}
                 className="
-                  relative py-2
+                  relative
+                  py-2
                   text-[15px]
                   font-medium
                   text-[#5F6877]
@@ -74,10 +78,12 @@ export function Header() {
               </ScrollToSection>
             ))}
           </nav>
+
           {/* Desktop Right Side */}
           <div className="hidden items-center gap-5 lg:flex">
             <a
               href={`tel:${phoneNumber.replace(/\s/g, "")}`}
+              dir="ltr"
               className="flex items-center gap-2 whitespace-nowrap text-[15px] font-semibold text-brand-navy"
             >
               <Phone
@@ -90,6 +96,7 @@ export function Header() {
 
             <LanguageSwitcher />
           </div>
+
           {/* Mobile Controls */}
           <div className="flex items-center gap-2 lg:hidden">
             {/* Phone */}
@@ -107,7 +114,7 @@ export function Header() {
                 shadow-sm
               "
             >
-              <a href={`tel:${phoneNumber.replace(/\s/g, "")}`}>
+              <a href={`tel:${phoneNumber.replace(/\s/g, "")}`} dir="ltr">
                 <Phone className="h-[19px] w-[19px]" />
               </a>
             </Button>
@@ -132,18 +139,32 @@ export function Header() {
               </SheetTrigger>
 
               <SheetContent
-                side="right"
-                className="
+                side={isArabic ? "left" : "right"}
+                className={`
                   w-full
                   max-w-[390px]
-                  border-l-0
                   bg-white
                   p-0
-                "
+                  ${isArabic ? "border-r-0" : "border-l-0"}
+                `}
               >
                 {/* Mobile Menu Header */}
-                <SheetHeader className="border-b px-5 py-5 text-left">
-                  <div className="flex items-center gap-3">
+                <SheetHeader
+                  className={`
+                    border-b
+                    px-5
+                    py-5
+                    ${isArabic ? "text-right" : "text-left"}
+                  `}
+                >
+                  <div
+                    className={`
+                      flex
+                      items-center
+                      gap-3
+                      ${isArabic ? "flex-row-reverse justify-between" : ""}
+                    `}
+                  >
                     <div className="flex flex-col leading-none">
                       <ScrollToSection
                         targetId="home"
@@ -175,7 +196,8 @@ export function Header() {
                       <ScrollToSection
                         key={item.href}
                         targetId={item.href}
-                        className="
+                        className={`
+                          flex
                           border-b
                           border-border
                           py-[19px]
@@ -184,9 +206,12 @@ export function Header() {
                           text-brand-navy
                           transition-colors
                           hover:text-[#F79000]
-                          flex
-                          justify-start
-                        "
+                          ${
+                            isArabic
+                              ? "justify-end text-right"
+                              : "justify-start text-left"
+                          }
+                        `}
                         onClick={() => setOpen(false)}
                       >
                         {t(item.label)}
@@ -259,7 +284,7 @@ export function Header() {
             shadow-sm
           "
         >
-          <a href={`tel:${hotLine.replace(/\s/g, "")}`}>
+          <a href={`tel:${hotLine.replace(/\s/g, "")}`} dir="ltr">
             <Phone className="h-5 w-5" />
             <span className="sr-only">Call us</span>
           </a>
@@ -282,7 +307,7 @@ export function Header() {
           "
         >
           <a
-            href={`https://wa.me/971508199942`}
+            href="https://wa.me/971508199942"
             target="_blank"
             rel="noopener noreferrer"
           >

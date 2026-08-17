@@ -13,6 +13,7 @@ export function CTAPhone() {
           <a
             key={phone.href}
             href={phone.href}
+            dir="ltr"
             className="
               text-2xl
               font-bold
